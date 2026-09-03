@@ -1,0 +1,40 @@
+{
+  "schema_name": "TRACKER_FULL_ASSEMBLY_EXPORT",
+  "schema_version": "1.0.0",
+  "assembly_path": "C:\\Users\\Kerem Bayer\\Desktop\\KBStracker\\Kerem_astro\\Matlab_model_extraction\\Measurement_for_math.SLDASM",
+  "active_configuration": "Default",
+  "snapshot_label": "S0_ZERO",
+  "export_timestamp_local": "2026-09-03T15:10:31",
+  "scope_contract": {
+    "visualization": "ACTIVE & UNSUPPRESSED & VISIBLE",
+    "dynamics": "ACTIVE & UNSUPPRESSED & VISIBLE",
+    "same_component_set_for_both": true
+  },
+  "rigid_body_groups_embedded_in_cad_export": false,
+  "geometry": {
+    "file": "geometry_root_triangles.csv",
+    "frame": "assembly_root",
+    "unit": "m",
+    "format": "component_index,x1,y1,z1,x2,y2,z2,x3,y3,z3"
+  },
+  "F0": {
+    "name": "Coordinate System1",
+    "mathtransform_native_array": [1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00631432061527E-02, 0, -0.03401231413688, 1, 0, 0, 0]
+  },
+  "counts": {
+    "included_nodes": 40,
+    "included_parts": 40,
+    "included_subassemblies": 0,
+    "geometry_components": 40,
+    "triangles": 120724,
+    "ignored_suppressed": 5,
+    "ignored_hidden": 58,
+    "ignored_unreadable_state": 0
+  },
+  "downstream_contract": {
+    "cad_export_role": "assembly source of truth",
+    "rigid_grouping_role": "MATLAB Model Builder",
+    "physics_role": "MATLAB Physics Core",
+    "simulink_role": "optional later control/system integration"
+  }
+}

@@ -1,0 +1,16 @@
+classdef testRootToF0 < matlab.unittest.TestCase
+    methods (Test)
+        function inverseAndTranslationDirectionAreCorrect(testCase)
+            model = trackerTestModel();
+            expected = [ ...
+                0.855148048755737, 0, 0.518383848812109, 0.00902595703219132; ...
+                0, 1, 0, 0; ...
+               -0.518383848812109, 0, 0.855148048755737, 0.034302134974173; ...
+                0, 0, 0, 1];
+            testCase.verifyEqual(model.frames.H_F0_from_root * ...
+                model.frames.H_root_from_F0, eye(4), AbsTol=1e-12);
+            testCase.verifyEqual(model.frames.H_F0_from_root, expected, AbsTol=1e-12);
+            testCase.verifyEqual(model.frames.H_F0_from_CadDatum(2,2), 1, AbsTol=1e-12);
+        end
+    end
+end

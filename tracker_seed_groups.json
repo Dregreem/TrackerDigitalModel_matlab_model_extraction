@@ -1,0 +1,89 @@
+{
+  "schema_name": "TRACKER_MODEL_BUILDER_SEED_GROUPS",
+  "schema_version": "1.0.0",
+  "baseline_snapshot": "S0_ZERO",
+  "baseline_component_count": 40,
+  "policy": {
+    "scope": "ACTIVE & UNSUPPRESSED & VISIBLE",
+    "unknown_component": "FAIL_OR_REQUIRE_EXPLICIT_CLASSIFICATION",
+    "cad_export_contains_semantic_groups": false
+  },
+  "groups": {
+    "B0": {
+      "motion_policy": "fixed",
+      "components": [
+        "sigma2020-200-1",
+        "M14_mount_left_2020base-1",
+        "sigma2020-300-1",
+        "M14_mount_right_2020base-1",
+        "b1_connector_right-4",
+        "b3_2020 adapter-1",
+        "02_angle_50deg_v4_2020base-1",
+        "04_rollmount left_50°_v6_2020base-1",
+        "04_rollmount right_50°_v6_2020base-1",
+        "sigma2020-300-3",
+        "b1_connector_left-3",
+        "6801^Measurement_for_math-1",
+        "M14_mount_rear_2020base_v4-1",
+        "6001^Measurement_for_math-4",
+        "6001^Measurement_for_math-3",
+        "Nima 17 40x42x5mm-2",
+        "Part26^Measurement_for_math-1"
+      ]
+    },
+    "B1": {
+      "motion_policy": "J1",
+      "components": [
+        "u4_holder-2",
+        "05_pole_v5-1",
+        "03_polemount_6801_v3-1",
+        "06c_splitring_part3_v4-2",
+        "05.1_pole_v4-1",
+        "06a_splitring_part1_v4-1",
+        "11_DEC_motor_mount_v9_NEMA-2",
+        "06b_splitring_part2_v4-1",
+        "u4_holder-1",
+        "05.1_pole_v4-2",
+        "05_pole_v5-2",
+        "05.2_stabilizer-2",
+        "6001^Measurement_for_math-1",
+        "6001^Measurement_for_math-2",
+        "Nima 17 40x42x5mm-1"
+      ]
+    },
+    "B2": {
+      "motion_policy": "J1_PLUS_J2",
+      "components": [
+        "u3_drivedisc_DEC_unimount_v3-2",
+        "u2_bearing_holder-2",
+        "sigma2020-220-1",
+        "sigma2020-220-2"
+      ]
+    },
+    "AUX_DRIVE": {
+      "motion_policy": "carrier_resolved_relative_drive_unresolved",
+      "components": [
+        "Belt6-1^Measurement_for_math-1",
+        "GT2_16T-1",
+        "GT2_16T-2",
+        "Belt5-22^Measurement_for_math-1"
+      ]
+    }
+  },
+  "joint_mate_evidence": {
+    "J1": {
+      "feature_name": "Concentric120",
+      "component_pair": [
+        "03_polemount_6801_v3-1",
+        "6801^Measurement_for_math-1"
+      ]
+    },
+    "J2": {
+      "feature_name": "Concentric99",
+      "component_pair": [
+        "u3_drivedisc_DEC_unimount_v3-2",
+        "6001^Measurement_for_math-1"
+      ]
+    }
+  }
+}

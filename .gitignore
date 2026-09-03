@@ -1,0 +1,45 @@
+# MATLAB generated/editor artifacts
+*.asv
+*.autosave
+*.m~
+*.slxc
+*.mex*
+codegen/
+slprj/
+DerivedData/
+.settings/
+SimulinkCache/
+
+# Generated cache/temp
+cache/
+**/cache/
+tmp/
+temp/
+reports/tmp/
+
+# OS/editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python helper environments
+__pycache__/
+*.pyc
+.venv/
+
+# SolidWorks native CAD / temporary files
+# The shared development source is the CAD Bridge export, not raw CAD.
+~$*
+*.SLDASM
+*.SLDPRT
+*.SLDDRW
+
+# Do NOT ignore:
+# *.m
+# *.mlx
+# *.mat (only commit intentional small model data)
+# *.slx
+# *.prj
+# JSON/CSV CAD Bridge baseline

@@ -1,0 +1,46 @@
+TRACKER CAD BRIDGE V2
+Assembly: Measurement_for_math.SLDASM
+Configuration: Default
+Snapshot: S0_ZERO
+Scope: ACTIVE + UNSUPPRESSED + VISIBLE
+----------------------------------------------------------------------------------------------------
+- [C0001] Belt6-1^Measurement_for_math-1 {part, bodies=1, triangles=400, mass=OK}
+- [C0002] 02_angle_50deg_v4_2020base-1 {part, bodies=1, triangles=2126, mass=OK}
+- [C0003] b1_connector_left-3 {part, bodies=1, triangles=2056, mass=OK}
+- [C0004] sigma2020-300-1 {part, bodies=1, triangles=220, mass=OK}
+- [C0005] 04_rollmount left_50°_v6_2020base-1 {part, bodies=1, triangles=10472, mass=OK}
+- [C0006] M14_mount_left_2020base-1 {part, bodies=1, triangles=4596, mass=OK}
+- [C0007] M14_mount_right_2020base-1 {part, bodies=1, triangles=4606, mass=OK}
+- [C0008] b1_connector_right-4 {part, bodies=1, triangles=2056, mass=OK}
+- [C0009] 04_rollmount right_50°_v6_2020base-1 {part, bodies=1, triangles=10296, mass=OK}
+- [C0010] sigma2020-200-1 {part, bodies=1, triangles=220, mass=OK}
+- [C0011] 06b_splitring_part2_v4-1 {part, bodies=1, triangles=1502, mass=OK}
+- [C0012] M14_mount_rear_2020base_v4-1 {part, bodies=1, triangles=6600, mass=OK}
+- [C0013] 06a_splitring_part1_v4-1 {part, bodies=1, triangles=4826, mass=OK}
+- [C0014] 06c_splitring_part3_v4-2 {part, bodies=1, triangles=3684, mass=OK}
+- [C0015] 05_pole_v5-2 {part, bodies=1, triangles=5222, mass=OK}
+- [C0016] 03_polemount_6801_v3-1 {part, bodies=1, triangles=1504, mass=OK}
+- [C0017] u3_drivedisc_DEC_unimount_v3-2 {part, bodies=1, triangles=9094, mass=OK}
+- [C0018] u4_holder-2 {part, bodies=1, triangles=320, mass=OK}
+- [C0019] u2_bearing_holder-2 {part, bodies=1, triangles=1536, mass=OK}
+- [C0020] u4_holder-1 {part, bodies=1, triangles=320, mass=OK}
+- [C0021] 05.1_pole_v4-2 {part, bodies=1, triangles=2922, mass=OK}
+- [C0022] 05.1_pole_v4-1 {part, bodies=1, triangles=2922, mass=OK}
+- [C0023] 05_pole_v5-1 {part, bodies=1, triangles=5222, mass=OK}
+- [C0024] 05.2_stabilizer-2 {part, bodies=1, triangles=5544, mass=OK}
+- [C0025] 11_DEC_motor_mount_v9_NEMA-2 {part, bodies=1, triangles=800, mass=OK}
+- [C0026] 6001^Measurement_for_math-3 {part, bodies=1, triangles=360, mass=OK}
+- [C0027] GT2_16T-1 {part, bodies=3, triangles=6892, mass=OK}
+- [C0028] 6001^Measurement_for_math-2 {part, bodies=1, triangles=360, mass=OK}
+- [C0029] 6001^Measurement_for_math-1 {part, bodies=1, triangles=360, mass=OK}
+- [C0030] sigma2020-220-1 {part, bodies=1, triangles=220, mass=OK}
+- [C0031] 6801^Measurement_for_math-1 {part, bodies=1, triangles=376, mass=OK}
+- [C0032] 6001^Measurement_for_math-4 {part, bodies=1, triangles=360, mass=OK}
+- [C0033] GT2_16T-2 {part, bodies=3, triangles=6892, mass=OK}
+- [C0034] Nima 17 40x42x5mm-1 {part, bodies=12, triangles=5944, mass=OK}
+- [C0035] Nima 17 40x42x5mm-2 {part, bodies=12, triangles=5944, mass=OK}
+- [C0036] Part26^Measurement_for_math-1 {part, bodies=1, triangles=1802, mass=OK}
+- [C0037] Belt5-22^Measurement_for_math-1 {part, bodies=1, triangles=404, mass=OK}
+- [C0038] sigma2020-220-2 {part, bodies=1, triangles=220, mass=OK}
+- [C0039] b3_2020 adapter-1 {part, bodies=1, triangles=1304, mass=OK}
+- [C0040] sigma2020-300-3 {part, bodies=1, triangles=220, mass=OK}

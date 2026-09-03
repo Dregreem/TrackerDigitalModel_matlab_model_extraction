@@ -1,0 +1,70 @@
+{
+  "schema_name": "TRACKER_CAD_BRIDGE_EXPORT",
+  "schema_version": "2.0.0",
+  "assembly_path": "C:\\Users\\Kerem Bayer\\Desktop\\KBStracker\\Kerem_astro\\Matlab_model_extraction\\Measurement_for_math.SLDASM",
+  "active_configuration": "Default",
+  "snapshot_label": "S0_ZERO",
+  "export_timestamp_local": "2026-09-03T15:31:58",
+  "scope_contract": {
+    "visualization": "ACTIVE & UNSUPPRESSED & VISIBLE",
+    "dynamics": "ACTIVE & UNSUPPRESSED & VISIBLE",
+    "same_component_set_for_both": true
+  },
+  "model_policy": {
+    "rigid_body_groups_embedded_in_cad_export": false,
+    "frozen_B1_B2_dynamics_overwritten_automatically": false,
+    "solidworks_raw_inertia_sign_conversion_applied": false
+  },
+  "geometry": {
+    "file": "geometry_root_triangles.csv",
+    "frame": "assembly_root",
+    "unit": "m",
+    "format": "component_index,x1,y1,z1,x2,y2,z2,x3,y3,z3"
+  },
+  "assembly_relations": {
+    "mates_file": "mates.json",
+    "mate_export_level": "root_assembly",
+    "mate_entity_frame": "assembly_root"
+  },
+  "F0": {
+    "name": "Coordinate System1",
+    "mathtransform_native_array": [1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00631432061527E-02, 0, -0.03401231413688, 1, 0, 0, 0]
+  },
+  "counts": {
+    "included_nodes": 40,
+    "included_parts": 40,
+    "included_subassemblies": 0,
+    "geometry_components": 40,
+    "triangles": 120724,
+    "mates_root_assembly": 194,
+    "mass_properties_unavailable": 0,
+    "ignored_suppressed": 5,
+    "ignored_hidden": 58,
+    "ignored_unreadable_state": 0
+  },
+  "included_visible_part_set_mass_properties": {
+    "available": true,
+    "solidworks_status": 0,
+    "frame": "assembly_root",
+    "units": "SI",
+    "center_of_mass_m": [-2.78190013280925E-02, 0.118212031084222, 0.159884765402555],
+    "volume_m3": 1.49509683488092E-03,
+    "surface_area_m2": 0.680004877353122,
+    "mass_kg": 1.51241641347696,
+    "solidworks_raw_moments_about_com_kg_m2": {
+      "xx": 2.77307087695643E-02,
+      "yy": 2.92558904716043E-02,
+      "zz": 2.42220326298557E-02,
+      "xy": -2.68099108318076E-03,
+      "zx": 3.05120306301434E-03,
+      "yz": 4.18430333750447E-04
+    },
+    "sign_conversion_applied": false
+  },
+  "downstream_contract": {
+    "cad_export_role": "assembly source of truth",
+    "rigid_grouping_role": "MATLAB Model Builder",
+    "physics_role": "MATLAB Physics Core",
+    "simulink_role": "optional later control/system integration"
+  }
+}

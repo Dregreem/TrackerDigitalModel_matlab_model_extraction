@@ -1,0 +1,78 @@
+2026-09-03 15:10:28 | Tracker Full Assembly Export V1 started.
+2026-09-03 15:10:28 | Assembly: C:\Users\Kerem Bayer\Desktop\KBStracker\Kerem_astro\Matlab_model_extraction\Measurement_for_math.SLDASM
+2026-09-03 15:10:28 | Active configuration: Default
+2026-09-03 15:10:28 | Snapshot label: S0_ZERO
+2026-09-03 15:10:28 | Frozen scope: active configuration AND unsuppressed AND visible.
+2026-09-03 15:10:28 | No B0/B1/B2 grouping is performed by this exporter.
+2026-09-03 15:10:28 | IGNORED hidden: indented hex flange head machine screw_am-9
+2026-09-03 15:10:28 | IGNORED hidden: indented hex flange head machine screw_am-10
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-10
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-14
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-16
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-3
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-7
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-12
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-4
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-13
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-2
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-6
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-5
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-9
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-11
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-15
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-20
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-25
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-32
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-33
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-18
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-30
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-21
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-28
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-34
+2026-09-03 15:10:28 | IGNORED hidden: pan cross head_am2-24
+2026-09-03 15:10:29 | IGNORED suppressed: b2_level holder_65mm-1
+2026-09-03 15:10:30 | IGNORED suppressed: Stepper motor 28BYJ-48 5V-1
+2026-09-03 15:10:30 | IGNORED hidden: Part17^Measurement_for_math-1
+2026-09-03 15:10:30 | IGNORED suppressed: Stepper motor 28BYJ-48 5V-2
+2026-09-03 15:10:30 | IGNORED suppressed: Panel_system-1
+2026-09-03 15:10:30 | IGNORED suppressed: Part12^Measurement_for_math-1
+2026-09-03 15:10:30 | IGNORED hidden: pyro^Measurement_for_math-1
+2026-09-03 15:10:30 | IGNORED hidden: Part16^Measurement_for_math-1
+2026-09-03 15:10:30 | IGNORED hidden: platform-1
+2026-09-03 15:10:31 | IGNORED hidden: Part23^Measurement_for_math-1
+2026-09-03 15:10:31 | IGNORED hidden: Stationary_panel_system_V2-1
+2026-09-03 15:10:31 | IGNORED hidden: Part18^Measurement_for_math-1
+2026-09-03 15:10:31 | IGNORED hidden: indented hex flange head machine screw_am-2
+2026-09-03 15:10:31 | IGNORED hidden: indented hex flange head machine screw_am-3
+2026-09-03 15:10:31 | IGNORED hidden: Part18^Measurement_for_math-2
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-78
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-36
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-84
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-86
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-87
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-90
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-92
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-80
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-82
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-37
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-76
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-77
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-81
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-83
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-85
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-88
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-89
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-91
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-94
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-96
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-93
+2026-09-03 15:10:31 | IGNORED hidden: pan cross head_am2-95
+2026-09-03 15:10:31 | Included component nodes: 40
+2026-09-03 15:10:31 | Included part nodes: 40
+2026-09-03 15:10:31 | Included subassembly nodes: 0
+2026-09-03 15:10:31 | Components with geometry: 40
+2026-09-03 15:10:31 | Total triangles: 120724
+2026-09-03 15:10:31 | Ignored suppressed: 5
+2026-09-03 15:10:31 | Ignored hidden/effectively hidden: 58
+2026-09-03 15:10:31 | Unreadable state count: 0
+2026-09-03 15:10:31 | Export completed successfully.

@@ -4,7 +4,10 @@
 
 **Phase 1 Model Builder: ACCEPTED**  
 **Phase 2A MATLAB rigid-body physics core: ACCEPTED**  
-**Next required gate: PRE-CONTROL MECHANICAL WORKSPACE & MOTION VALIDATION**
+**Pre-Control P0 Baseline Freeze: ACCEPTED**  
+**Pre-Control P1 Kinematic Motion Audit: ACCEPTED**  
+**Pre-Control P2 Dense Workspace Sweep: ACCEPTED**  
+**Next required gate: P3 RIGID COLLISION / INTERFERENCE AUDIT**
 
 Controller, trajectory-control logic, motor/driver modeling and Simulink are **not authorized yet**.
 
@@ -40,17 +43,104 @@ Delivered and validated:
 - `trackerJointLimitEvents`
 - `validateTrackerDynamics`
 
-Current accepted regression result from `reports/phase2a_build_report.md`:
+Accepted Phase 2A regression:
 
-- 45 passed, 0 failed, 0 incomplete
-- MATLAB Code Analyzer: 0 issues
-- zero-pose gravity hold = `[0.353140721921649; -0.0161552496631221] N m`
-- minimum mass-matrix eigenvalue = `0.00153380797319206`
-- minimum mass-matrix determinant = `2.61592646294479e-05`
-- gravity/potential residual = `4.22298473967686e-10 N m`
-- forward/inverse round-trip residual = `1.94289029309402e-16`
+```text
+45 passed
+0 failed
+0 incomplete
+```
 
-## Joint limits — current configured values, not yet declared collision-free workspace
+## Pre-Control accepted checkpoints
+
+### P0 — Baseline Freeze
+
+Accepted:
+
+- clean repository checkpoint
+- Phase 1/2A regression baseline
+- dynamics validation PASS
+- accepted AUX_DRIVE limitations explicitly preserved
+
+Report:
+
+```text
+reports/precontrol_p0_baseline.md
+```
+
+### P1 — Kinematic Motion Audit
+
+Accepted critical-pose invariants:
+
+- B0 fixed
+- B1 depends only on q1
+- B2 hierarchy correct
+- J2 origin/axis transported by J1
+- q2 does not move J2 origin/axis
+- distance-to-axis invariants preserved
+- q2 ±180 degree geometric closure preserved
+- rigid pulley carrier relationships preserved
+
+Regression after P1:
+
+```text
+59 passed
+0 failed
+0 incomplete
+```
+
+Report:
+
+```text
+reports/precontrol_p1_kinematic_audit.md
+```
+
+### P2 — Dense Workspace Sweep
+
+Accepted deterministic configured-space sweep:
+
+```text
+J1 = -100:5:+100 deg   -> 41 values
+J2 = -180:5:+180 deg   -> 73 values
+Total                   -> 2993 poses
+```
+
+Result:
+
+```text
+2993 / 2993 poses passed
+0 failed poses
+
+workspaceReport.pass = 1
+workspaceReport.failedPoseCount = 0
+```
+
+Maximum observed P2 errors:
+
+```text
+maxRotationOrthogonalityError = 1.2163e-15
+maxRotationDeterminantError   = 8.8818e-16
+maxJ2AxisTransportError       = 2.7195e-16
+maxB1AxisRadiusError          = 5.5511e-17
+maxB2AxisRadiusError          = 1.8041e-16
+maxQ2EndpointTransformError   = 4.7184e-16
+```
+
+Full regression after P2:
+
+```text
+64 passed
+0 failed
+0 incomplete
+```
+
+Report:
+
+```text
+reports/precontrol_p2_dense_workspace_audit.md
+```
+
+## Joint limits — configured but not yet certified collision-free
 
 Single source of truth:
 
@@ -59,9 +149,16 @@ J1 = [-100 deg, +100 deg]
 J2 = [-180 deg, +180 deg]
 ```
 
-These values are wired into the model, viewer and numerical ODE events.
+P2 proves the kinematic implementation is numerically consistent over this entire rectangle.
 
-**Important:** numerical limit enforcement does not prove that every pose inside this rectangle is mechanically feasible or collision-free. The safe operating envelope is not frozen until the pre-control workspace audit passes.
+P2 does **not** prove this entire rectangle is mechanically collision-free.
+
+Therefore:
+
+```text
+safeOperatingEnvelopeFrozen = false
+collisionStatus = PENDING_P3_COLLISION_INTERFERENCE_AUDIT
+```
 
 ## AUX_DRIVE
 
@@ -76,34 +173,35 @@ Still intentionally unresolved:
 - belt deformation / belt motion
 - analytical AUX_DRIVE inertia contribution
 
-## Mandatory next gate — Pre-Control Mechanical Workspace & Motion Validation
+## Mandatory next gate — P3 Rigid Collision / Interference Audit
 
-No controller development starts until this gate is accepted.
+No controller development starts until P3 and final safe-workspace freeze are accepted.
 
-Required checks are defined in:
+Required rigid collision scope:
 
 ```text
-PRE_CONTROL_VALIDATION_CONTRACT.md
+B0 <-> B1
+B0 <-> B2
+B1 <-> B2
+rigid AUX pulley geometry <-> relevant rigid bodies
 ```
 
-At minimum the gate must validate:
+P3 must use actual transformed CAD mesh geometry or an equivalently rigorous approved SolidWorks interference audit.
 
-1. all boundary and corner poses;
-2. dense q1-q2 workspace motion;
-3. B0/B1/B2 motion invariants;
-4. J2 axis/origin carriage by B1;
-5. pulley carrier attachment over the full range;
-6. q2 ±180-degree endpoint continuity;
-7. ground/reference-frame stability;
-8. collision/interference across the allowed workspace;
-9. all four numerical joint-limit event directions;
-10. representative visual evidence and a PASS/FAIL report.
+Visual inspection alone is insufficient.
 
-### Acceptance rule
+P3 must determine, where available:
 
-Only after this validation do we freeze the **safe operating envelope**.
+```text
+collisionPairs
+firstCollisionPose
+safeWorkspace(q1,q2)
+minimumClearanceEstimate
+```
 
-If collision/interference or geometric infeasibility is found, the joint limits must be reduced or a coupled q1-q2 admissible-workspace rule must be introduced **before** trajectory/controller development.
+If collision/interference occurs inside the configured rectangle, reduce the independent limits or define a coupled admissible q1-q2 workspace before any trajectory/controller work.
+
+Flexible-belt collision/deformation remains unresolved unless separately modeled or audited.
 
 ## Explicitly not modeled yet
 
@@ -123,9 +221,13 @@ Do not invent:
 ```text
 Phase 1        Model Builder                         ACCEPTED
 Phase 2A       Ideal rigid-body physics core         ACCEPTED
-PRE-CONTROL    Workspace/motion/interference audit   NEXT / REQUIRED
-Phase 2B       Trajectory + ideal closed-loop        BLOCKED
-Actuator       Motor/driver/transmission model       LATER, with real parameters
+P0             Baseline freeze                       ACCEPTED
+P1             Critical-pose kinematic audit         ACCEPTED
+P2             2993-pose dense workspace sweep       ACCEPTED
+P3             Rigid collision/interference audit    NEXT / REQUIRED
+P4             Safe workspace freeze                 BLOCKED BY P3
+Phase 2B       Trajectory + ideal closed-loop        BLOCKED BY P4
+Actuator       Motor/driver/transmission model       LATER
 Simulink       System/control integration            LATER
 ```
 
